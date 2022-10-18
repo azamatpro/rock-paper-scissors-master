@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="popup hidden">
+      <div class="popup__head">
+        <h2 class="popup__text">Rules</h2>
+      </div>
+      <img class="popup__close popup__close-main" src="images/icon-close.svg" alt="Close img" />
+      <img
+        class="popup__rules-img"
+        src="images/image-rules.svg"
+        alt="Rules img"
+      />
+      
+    </div>
+
+    <div class="restart hidden">
+      <h2 class="restart__text">You lost the game!</h2>
+      <button class="btn restart__btn">Restart</button>
+    </div>
+
+    <div class="overlay hidden"></div>
+    <main class="container">
+      <section class="section-table">
+        <div class="table-title">
+          <h2 class="table-title__text">Rock</h2>
+          <h2 class="table-title__text">Paper</h2>
+          <h2 class="table-title__text">Scissors</h2>
+        </div>
+
+        <div class="table-score">
+          <p class="table-score__text">score</p>
+          <h1 class="table-score__data">12</h1>
+        </div>
+      </section>
+
+      <section class="section-play section-play--primary">
+        <div class="play-box play-box--1" data-option="1">
+          <img class="play-box__img" src="/images/icon-1.svg" alt="Paper img" />
+        </div>
+        <div class="play-box play-box--2" data-option="2">
+          <img
+            class="play-box__img"
+            src="/images/icon-2.svg"
+            alt="Scissors img"
+          />
+        </div>
+        <div class="play-box play-box--3" data-option="3">
+          <img class="play-box__img" src="/images/icon-3.svg" alt="Rock img" />
+        </div>
+      </section>
+
+      <section class="section-play section-play--sub hidden">
+        <div class="play-box__sub play-box__sub--1">
+          <!-- <h2 class="play-box__title">You Picked</h2>
+          <div class="play-box play-box--1 player-scale">
+            <img
+              class="play-box__img"
+              src="/images/icon-1.svg"
+              alt="Paper img"
+            />
+          </div> -->
+        </div>
+
+        <div class="play-message hidden">
+          <h1 class="play-message__text"></h1>
+          <button class="btn play-again-btn">Play Again</button>
+        </div>
+
+        <div class="play-box__sub play-box__sub--2">
+          <!-- <h2 class="play-box__title">The House Picked</h2> -->
+          <!-- <div class="play-box play-box--2 player-scale"">
+            <img
+              class="play-box__img"
+              src="/images/icon-scissors.svg"
+              alt="Scissors img"
+            />
+          </div> -->
+        </div>
+        <div class="play-box player-scale fake-player">3</div>
+      </section>
+    </main>
+    <button class="rules-btn">Rules</button>
+  </body>
+</html>

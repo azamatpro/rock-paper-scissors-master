@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%; // 1rem = 10px
+
+  @media screen and (max-width: 56.25em){
+    font-size: 56.25%;
+  }
+  
+}
+body {
+  box-sizing: border-box;
+  background-color: rgba(31, 55, 87, 1);
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+.container {
+  display: grid;
+  justify-items: center;
+  // row-gap: 15rem;
+}
