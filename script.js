@@ -85,7 +85,7 @@ playersBox.addEventListener(`click`, function (e) {
 
   timeOut = setTimeout(() => {
     html = `
-    <h2 class="play-box__title">The Picked</h2>
+    <h2 class="play-box__title">The House Picked</h2>
     <div class="play-box play-box--${randomCall} player-scale">
     <img
       class="play-box__img"
