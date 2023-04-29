@@ -163,12 +163,26 @@ body {
   grid-row: 1/span 1;
 }
 
+.fake-player-content {
+  background-color: rgb(25, 45, 71);
+  border: 2rem solid rgb(25, 45, 71);
+}
+
 .fake-player {
   font-size: 12rem;
   font-weight: 700;
-  background-color: rgb(25, 45, 71);
   color: #dadada;
-  border: 2rem solid rgb(25, 45, 71);
+  line-height: 0;
+}
+@media screen and (max-width: 56.25em) {
+  .fake-player {
+    font-size: 10rem;
+  }
+}
+@media screen and (max-width: 29.3em) {
+  .fake-player {
+    font-size: 8rem;
+  }
 }
 
 .play-box {
