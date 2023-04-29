@@ -4,11 +4,11 @@
   "description": "![Design preview for the Rock, Paper, Scissors coding challenge](./design/desktop-preview.jpg)",
   "main": "script.js",
   "scripts": {
-    "start": "node-sass sass/main.scss css/style.css -w"
+    "start": "sass sass/main.scss css/style.css -w"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "node-sass": "^7.0.3"
+  "dependencies": {
+    "sass": "^1.62.1"
   }
 }

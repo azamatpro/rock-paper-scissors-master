@@ -10,6 +10,7 @@ const playersBox = document.querySelector(`.section-play`);
 const playersBoxPrimary = document.querySelector(`.section-play--primary`);
 const playersBoxSub = document.querySelector(`.section-play--sub`);
 const fakePlayer = document.querySelector(`.fake-player`);
+const fakePlayerBox = document.querySelector(`.fake-player-box`);
 const playMessage = document.querySelector(`.play-message`);
 const playMessageText = document.querySelector(`.play-message__text`);
 const btnPlayAgain = document.querySelector(`.play-again-btn`);
@@ -63,16 +64,17 @@ playersBox.addEventListener(`click`, function (e) {
 
   userPicked = `
   <h2 class="play-box__title">You Picked</h2>
-  <div class="play-box play-box--${selectedOption} player-scale">
+  <div class="play-box dice-bg play-box--${selectedOption} player-scale">
     <img
       class="play-box__img"
-      src="/images/icon-${selectedOption}.svg"
+      src="./images/icon-${selectedOption}.svg"
       alt="Paper img"
     />
   </div>
   `;
 
   subBox1.insertAdjacentHTML("afterbegin", userPicked);
+  fakePlayerBox.classList.remove("hidden");
 
   timeInterval = setInterval(() => {
     counter--;
@@ -85,17 +87,17 @@ playersBox.addEventListener(`click`, function (e) {
 
   timeOut = setTimeout(() => {
     html = `
-    <h2 class="play-box__title">The House Picked</h2>
-    <div class="play-box play-box--${randomCall} player-scale">
+    <h2 class="play-box__title">Random</h2>
+    <div class="play-box dice-bg play-box--${randomCall} player-scale">
     <img
       class="play-box__img"
-      src="/images/icon-${randomCall}.svg"
+      src="./images/icon-${randomCall}.svg"
       alt="Player Img"
     />
   </div>
     `;
-    fakePlayer.classList.add(`hidden`);
-    subBox2.insertAdjacentHTML("afterbegin", html);
+    fakePlayerBox.classList.add(`hidden`);
+    subBox2.insertAdjacentHTML("beforeend", html);
     playMessage.classList.remove(`hidden`);
 
     if (selectedOption === randomCall) {
@@ -117,11 +119,12 @@ playersBox.addEventListener(`click`, function (e) {
 });
 
 btnPlayAgain.addEventListener(`click`, function () {
+  fakePlayerBox.classList.remove(`hidden`);
   playersBoxSub.classList.add(`hidden`);
   playersBoxPrimary.classList.remove(`hidden`);
   subBox1.innerHTML = ``;
   subBox2.innerHTML = ``;
-  fakePlayer.classList.remove(`hidden`);
+
   playMessage.classList.add(`hidden`);
 
   if (score === 0) {
