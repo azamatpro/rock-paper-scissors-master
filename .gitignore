@@ -3,6 +3,7 @@
 ## Please do not remove line 5 - thanks! 🙂 ##
 ###############################################
 *.sketch
+node_modules
 
 # Avoid accidental XD or Figma upload if you convert the design file
 #######################################################
